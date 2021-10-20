@@ -25,6 +25,7 @@ public class Spawnerscript : MonoBehaviour
         PositionY = Random.Range(4, -4f);
         NumberOfObject = Random.Range(0, SpawnObject.Length);
         this.transform.position = new Vector3(transform.position.x, PositionY, transform.position.z);
-        Instantiate(SpawnObject[NumberOfObject], transform.position, transform.rotation);
+       Destroy(Instantiate(SpawnObject[NumberOfObject], transform.position, transform.rotation),7);
+        
     }
 }
